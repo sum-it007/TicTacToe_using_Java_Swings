@@ -1,6 +1,7 @@
 package com.company;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -20,6 +21,8 @@ class Game extends JFrame implements ActionListener{
     String firstPlayer=null,secondPlayer=null;
     int l=0,k=0,count=0;
     int player1score=0,player2score=0;
+    Color Blue1 = new Color(5,123,129);
+    Color Blue2 = new Color(150,203,187);
 
     public Game()
     {
@@ -165,11 +168,13 @@ class Game extends JFrame implements ActionListener{
     {
         if(k==0) {
             Selected_btn.setText("X");
+            Selected_btn.setBackground(Blue1);
             k = 1;
             Selected_btn.setEnabled(false);
             subCheck();
         }else {
             Selected_btn.setText("0");
+            Selected_btn.setBackground(Blue2);
             k=0;
             Selected_btn.setEnabled(false);
             subCheck();
@@ -201,6 +206,16 @@ class Game extends JFrame implements ActionListener{
             b7.setText("");
             b8.setText("");
             b9.setText("");
+
+            b1.setBackground(null);
+            b2.setBackground(null);
+            b3.setBackground(null);
+            b4.setBackground(null);
+            b5.setBackground(null);
+            b6.setBackground(null);
+            b7.setBackground(null);
+            b8.setBackground(null);
+            b9.setBackground(null);
             winner.setText("");
         }
         if(e.getSource()==b1)
