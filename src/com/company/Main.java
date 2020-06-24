@@ -73,11 +73,15 @@ class Game extends JFrame implements ActionListener{
         winner.setBounds(75,350,160,30);
 
         firstPlayer = JOptionPane.showInputDialog("Enter name of First Player :");
-        if(firstPlayer==null)
+        if(firstPlayer==null||firstPlayer.equals(""))
             firstPlayer="Player 1";
         secondPlayer = JOptionPane.showInputDialog("Enter name of Second Player :");
-        if(secondPlayer==null)
+        if(secondPlayer==null||secondPlayer.equals(""))
             secondPlayer="Player 2";
+
+
+        System.out.println(firstPlayer);
+        System.out.println(secondPlayer);
         b1.addActionListener(this);
         b2.addActionListener(this);
         b3.addActionListener(this);
